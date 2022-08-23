@@ -202,7 +202,6 @@
 
 
 /*Pagina de muebles*/
-
 .header-completo{
     display: grid;
     background: linear-gradient(#c2b4c2, #c7c7c7, #9c9c9c, #969496);
@@ -344,26 +343,26 @@
 }
 
 
+/*media querys cortinas*/
+
 @media (max-width: 768px) {
 
-.contenedor-cortinas{
-    height: 80vh;
-    display: grid;
-    grid-template-columns: auto ;
-    grid-template-rows: 1.5fr 1fr 1fr 0.5fr ;
+    .contenedor-cortinas{
+        height: 80vh;
+        display: grid;
+        grid-template-columns: auto ;
+        grid-template-rows: 1.5fr 1fr 1fr 0.5fr ;
     
-    
-    grid-template-areas:
-                        "img-cortinas-1"
-                        "img-cortinas-2"
-                        "img-cortinas-3"
-                        "img-cortinas-4";
-    justify-content: center;
-    justify-items: center;
-    align-items: center;   
-}
-}
-/*media querys cortinas*/
+        grid-template-areas:
+                            "img-cortinas-1"
+                            "img-cortinas-2"
+                            "img-cortinas-3"
+                            "img-cortinas-4";
+        justify-content: center;
+        justify-items: center;
+        align-items: center;   
+    }
+    }
 
 @media (max-width: 768px){
     .contenedor{
@@ -371,6 +370,8 @@
         align-items: center;
     }
 }
+
+
 
 /* Media querys index*/
 
