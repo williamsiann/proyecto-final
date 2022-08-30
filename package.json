@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/style.scss css/main.css","watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "build-css": "node-sass --include-path scss scss/style.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
@@ -143,6 +144,7 @@
     "lru-cache": "^6.0.0",
     "make-fetch-happen": "^9.1.0",
     "map-obj": "^4.3.0",
+    "mdb-ui-kit": "^5.0.0",
     "meow": "^9.0.0",
     "mime-db": "^1.52.0",
     "mime-types": "^2.1.35",

@@ -1,3 +1,4 @@
+@import url(~mdb-ui-kit/css/mdb.min.css);
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
 
 /*index principal*/
 .principalPadre {
-  height: 500px;
+  height: 31.25rem;
   display: grid; }
 
 .headerIndex {
@@ -24,12 +25,12 @@
   color: #454647; }
 
 .navBar {
-  padding: 1px 2px;
+  padding: 0.063rem 0.125rem;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   font-size: 1rem; }
 
 .navBar ul {
-  padding: 1px;
+  padding: 0.063rem;
   margin: 0;
   display: flex;
   justify-content: space-around;
@@ -44,7 +45,7 @@
 
 .navBar ul a {
   text-decoration: none;
-  font-size: 15px;
+  font-size: 0.938rem;
   color: #383838; }
 
 .navBar ul ul {
@@ -58,67 +59,77 @@
 
 .navBar ul ul li {
   float: none;
-  width: 150px; }
+  width: 9.375rem; }
 
 .navBar ul ul a {
   line-height: 120%;
-  padding: 10px 15px; }
+  padding: 0.625rem, 0.938rem; }
 
 .navBar ul li:hover > ul {
   display: block; }
+
+/*contenedor uno*/
+.contenedorUno {
+  grid-area: contenedorUno;
+  display: flex; }
 
 .cajaUno {
   background-color: white;
   overflow: hidden;
   width: 50%;
-  height: 717px;
+  height: 44.813rem;
   float: left;
   position: relative;
-  display: block; }
+  display: block;
+  grid-area: cajaUno; }
 
 .imgSillon {
   object-fit: cover;
   width: 100%;
-  height: 717px;
+  height: 44.813rem;
   display: block; }
 
 .cajaDos {
   background-color: #E5E5E5;
   overflow: hidden;
   width: 50%;
-  height: 717px;
+  height: 44.813rem;
   float: left;
-  padding: 30px;
+  padding: 1.875rem;
   position: relative;
   display: block;
   font-size: 16px;
-  text-align: center; }
+  text-align: center;
+  grid-area: cajaDos; }
 
 .imgRedonda {
   width: 18.75rem;
   height: 18.75rem;
   border-radius: 9.37rem;
-  border: 0.6rem solid #DFDEDE;
-  margin: 1.25rem;
+  border: 0.8rem solid #DFDEDE;
+  margin: 3rem;
   align-items: center; }
 
+/*contenedor Dos*/
 .contenedorDos {
-  display: flex; }
+  display: flex;
+  grid-area: contenedorDos; }
 
 .cajaTres {
   background-color: whitesmoke;
   overflow: hidden;
   width: 50%;
-  height: 717px;
+  height: 44.813rem;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  grid-area: cajaTres; }
 
 .catalogoCajaTres {
-  width: 400px;
-  height: 400px;
+  width: 25rem;
+  height: 25rem;
   text-align: center;
-  font-size: 35px;
+  font-size: 2.188rem;
   margin: 17rem 0 0 0; }
 
 .cajaCuatro {
@@ -130,7 +141,8 @@
   padding: 30px;
   position: relative;
   display: flex;
-  text-align: center; }
+  text-align: center;
+  grid-area: cajaCuatro; }
 
 .imgTelasUno {
   width: 200px;
@@ -154,8 +166,10 @@
     margin-left: 0%;
     width: 100%; } }
 
+/*contenedor Tres*/
 .contenedorTres {
-  display: flex; }
+  display: flex;
+  grid-area: contenedorTres; }
 
 .div-img-grises {
   width: 20rem;
@@ -165,6 +179,18 @@
   position: relative; }
 
 .imgGrises {
+  grid-area: imgGrises; }
+
+.img-telas-6mq {
+  grid-area: img-telas-6; }
+
+.img-telas-7mq {
+  grid-area: img-telas-7; }
+
+.img-telas-8mq {
+  grid-area: img-telas-8; }
+
+.imgGrises {
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -172,6 +198,78 @@
   position: relative;
   display: flex;
   text-align: center; }
+
+.img-telas-6 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  float: left;
+  position: relative;
+  display: flex;
+  text-align: center; }
+
+.img-telas-7 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  float: left;
+  position: relative;
+  display: flex;
+  text-align: center; }
+
+.img-telas-8 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  float: left;
+  position: relative;
+  display: flex;
+  text-align: center; }
+
+/*contenedor cuatro*/
+.contenedorCuatro {
+  display: flex;
+  grid-area: contenedorCuatro; }
+
+.cajaCinco {
+  background-color: whitesmoke;
+  overflow: hidden;
+  width: 50%;
+  height: 44.813rem;
+  float: left;
+  padding: 1.875rem;
+  position: relative;
+  display: flex;
+  text-align: center;
+  grid-area: cajaCuatro; }
+
+.img-bathroom-1 {
+  margin-left: 10rem;
+  align-items: center; }
+
+.textoCajaCinco {
+  width: 50%;
+  align-content: center;
+  margin-top: 10rem;
+  font-size: 1.2rem;
+  text-align: center; }
+
+.cajaSeis {
+  background-color: whitesmoke;
+  overflow: hidden;
+  width: 50%;
+  height: 44.813rem;
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  grid-area: cajaSeis; }
+
+.textoCajaSeis {
+  width: 25rem;
+  height: 25rem;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 13rem 0 0 0; }
 
 /*Pagina de muebles*/
 .header-completo {
@@ -301,15 +399,9 @@
     height: 80vh;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 1.5fr 1fr 1fr 0.5fr;
     grid-template-areas: "img-cortinas-1" "img-cortinas-2" "img-cortinas-3" "img-cortinas-4";
     justify-content: center;
     justify-items: center;
-    align-items: center; } }
-
-@media (max-width: 768px) {
-  .contenedor {
-    flex-direction: column;
     align-items: center; } }
 
 /* Media querys index*/
