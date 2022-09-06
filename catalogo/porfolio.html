@@ -15,56 +15,69 @@
 
     <!-- Link de boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    
+
+
     <title>Maria AlmacenDeDeco</title>
   </head>
-
-  <body class="body-cortinas">
-    <header>
-      <nav class="navbar bg-light fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html"> Maria Arena Almacen Deco</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Menu</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link" href="../index.html">Home </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../catalogo/telas.html"> Telas </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../catalogo/muebles.html">Muebles</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../catalogo/cortinas.html">Cortinas</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../catalogo/porfolio.html">Mi Porfolio</a>
-                </li>
-              </ul>
+  <body>
+      <header>
+        <nav class="navbar bg-light fixed-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"> Maria Arena Almacen Deco</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../catalogo/telas.html"> Telas </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../catalogo/muebles.html">Muebles</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../catalogo/cortinas.html">Cortinas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../catalogo/porfolio.html">Mi Porfolio</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
+        </nav>
+      </header>
+      <section id="section-1-NL">
+        <div class="contenedor-NL">
+          <div class="section-1-NL-caja">
+            <p class="texto-1 textos-NL">Porfolio</p>
+            <h1 class="texto-2">Ian Williams</h1>
+            <p class="texto-3">
+              Soy Ian Williams, este es mi profolio de fotografias, realizo fotografias de retratos, paisajes y animales. Ademas, edito con ligthroom, mi cuenta de Instagram es <a class="linkWilliamsiannn" target="_blank" href="https://www.instagram.com/williamsiannn/">Williamsiannn.</a>
+            </p>
+          </div>
         </div>
-      </nav>
-    </header>
-      <main>
-        <div class="contenedor-cortinas">
-          <div class="hijos"> <img src="../img/cortinas-1.jpg" class="img-cortinas-1" alt=""></div>
-          <div class="hijos"> <img src="../img/cortinas-2.jpg" class="img-cortinas-2" alt=""></div>
-          <div class="hijos"> <img src="../img/cortinas-3.jpg" class="img-cortinas-3" alt=""></div>
-          <div class="hijos"> <img src="../img/cortinas-4.jpg" class="img-cortinas-4" alt=""></div>
-          <div class="hijos"> <img src="../img/cortinas-5.jpg" class="img-cortinas-5" alt=""></div>
-          <div class="hijos"> <img src="../img/cortinas-6.jpg" class="img-cortinas-6" alt=""></div>
-          <div class="hijos"> <img src="../img/cortinas-7.jpg" class="img-cortinas-7" alt=""></div>
-          <div class="hijos"> <img src="../img/cortinas-8.jpg" class="img-cortinas-8" alt=""></div>
+      </section>
+  
+      <main id="galeria">
+        <div class="container">
+          <div class="galeria-grid">
+            <div class="galeria-grid-cajas caja-1"></div>
+            <div class="galeria-grid-cajas caja-2"></div>
+            <div class="galeria-grid-cajas caja-3"></div>
+            <div class="galeria-grid-cajas caja-4"></div>
+            <div class="galeria-grid-cajas caja-5"></div>
+            <div class="galeria-grid-cajas caja-6"></div>
+            <div class="galeria-grid-cajas caja-7"></div>
+          </div>
         </div>
       </main>
       <footer id="footer-general" class="text-center text-white">
@@ -95,6 +108,7 @@
               </svg>
               </a>
             </div>
+        <!-- Grid container -->
       
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
