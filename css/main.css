@@ -437,7 +437,7 @@
   border: 2px solid #5e5d5d;
   border-radius: 10px; }
 
-/*media querys cortinas*/
+/*media querys*/
 @media (max-width: 768px) {
   .contenedor-cortinas {
     height: 100vh;
@@ -446,7 +446,12 @@
     grid-template-areas: "img-cortinas-1" "img-cortinas-2" "img-cortinas-3" "img-cortinas-4" "img-cortinas-5" "img-cortinas-6" "img-cortinas-7" "img-cortinas-8";
     justify-content: center;
     justify-items: center;
-    align-items: center; } }
+    align-items: center; }
+  #galeria .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-template-areas: "caja-1" "caja-2" "caja-3" "caja-4" "caja-5" "caja-6" "caja-7"; } }
 
 @media (min-width: 768px) {
   .contenedor-cortinas {
@@ -456,7 +461,12 @@
     grid-template-areas: "img-cortinas-1 img-cortinas-2 img-cortinas-3 img-cortinas-4" "img-cortinas-5 img-cortinas-6 img-cortinas-7 img-cortinas-8";
     justify-content: center;
     justify-items: center;
-    align-items: center; } }
+    align-items: center; }
+  #galeria .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-template-areas: "caja-1 caja-2 caja-3 caja-4" "caja-1 caja-5 caja-6 caja-7"; } }
 
 /*Pagina Mi Porfolio*/
 /*Secction-1*/
@@ -522,45 +532,47 @@
   grid-column: 1;
   grid-row: 1/3;
   height: 820px;
-  background-position: center; }
+  background-position: center;
+  grid-area: caja-1; }
 
 #galeria .caja-2 {
   background: url("../img/IAN_2.jpg");
   grid-column: 2;
   grid-row: 1/2;
-  background-position: center; }
+  background-position: center;
+  grid-area: caja-2; }
 
 #galeria .caja-3 {
   background: url("../img/IAN_3.jpg");
   grid-column: 3;
   grid-row: 1/2;
-  background-position: center; }
+  background-position: center;
+  grid-area: caja-3; }
 
 #galeria .caja-4 {
   background: url("../img/IAN_5.jpg");
   grid-column: 2;
   grid-row: 2/3;
-  background-position: center; }
+  background-position: center;
+  grid-area: caja-4; }
 
 #galeria .caja-5 {
   background: url("../img/IAN_7.jpg");
   grid-column: 3;
   grid-row: 2/3;
-  background-position: center; }
+  background-position: center;
+  grid-area: caja-5; }
 
 #galeria .caja-6 {
   background: url("../img/IAN_8.jpg");
   grid-column: 4;
   grid-row: 1/2;
-  background-position: center; }
+  background-position: center;
+  grid-area: caja-6; }
 
 #galeria .caja-7 {
   background: url("../img/IAN_9.jpg");
   grid-column: 4;
   grid-row: 2/3;
-  background-position: center; }
-
-/*media querys mi porfolio*/
-@media only screen and (max-width: 770px) {
-  #galeria .galeria-grid {
-    grid-template-columns: 1fr; } }
+  background-position: center;
+  grid-area: caja-7; }
