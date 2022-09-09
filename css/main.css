@@ -4,75 +4,21 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif; }
 
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth; }
+
 #footer-general {
   background-color: #313131; }
 
-/*index principal*/
-.principalPadre {
-  height: 31.25rem;
-  display: grid; }
-
-.headerIndex {
-  background-color: #DFDEDE;
-  color: white;
-  display: grid;
-  flex-direction: column;
-  align-items: center; }
-
-.tituloHeader {
-  padding: 1px;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  margin-inline-start: 2rem;
-  color: #454647; }
-
-.navBar {
-  padding: 0.063rem 0.125rem;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  font-size: 1rem; }
-
-.navBar ul {
-  padding: 0.063rem;
-  margin: 0;
-  display: flex;
-  justify-content: space-around;
-  column-gap: 5rem; }
-
-.navBar ul li {
-  list-style: none;
-  font-weight: bold;
-  text-align: center;
-  display: inline;
-  position: relative; }
-
-.navBar ul a {
-  text-decoration: none;
-  font-size: 0.938rem;
-  color: #383838; }
-
-.navBar ul ul {
-  display: none;
-  position: sticky;
-  top: 100%;
-  left: 0;
-  background: #eee;
-  padding: 0;
-  z-index: 100; }
-
-.navBar ul ul li {
-  float: none;
-  width: 9.375rem; }
-
-.navBar ul ul a {
-  line-height: 120%;
-  padding: 0.625rem, 0.938rem; }
-
-.navBar ul li:hover > ul {
-  display: block; }
+p {
+  font-size: 1rem;
+  margin: 10px 0;
+  line-height: 1.7em; }
 
 /*contenedor uno*/
 .contenedorUno {
-  grid-area: contenedorUno;
   display: flex; }
 
 .cajaUno {
@@ -82,8 +28,7 @@
   height: 44.813rem;
   float: left;
   position: relative;
-  display: block;
-  grid-area: cajaUno; }
+  display: block; }
 
 .imgSillon {
   object-fit: cover;
@@ -101,8 +46,7 @@
   position: relative;
   display: block;
   font-size: 16px;
-  text-align: center;
-  grid-area: cajaDos; }
+  text-align: center; }
 
 .imgRedonda {
   width: 18.75rem;
@@ -114,8 +58,7 @@
 
 /*contenedor Dos*/
 .contenedorDos {
-  display: flex;
-  grid-area: contenedorDos; }
+  display: flex; }
 
 .cajaTres {
   background-color: whitesmoke;
@@ -124,18 +67,17 @@
   height: 44.813rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  grid-area: cajaTres; }
+  align-items: center; }
 
 .catalogoCajaTres {
   width: 25rem;
   height: 25rem;
   text-align: center;
   font-size: 2.188rem;
-  margin: 17rem 0 0 0; }
+  margin: 10rem 0 0 0; }
 
 .cajaCuatro {
-  background-color: #DFDEDE;
+  background-color: whitesmoke;
   overflow: hidden;
   width: 50%;
   height: 717px;
@@ -143,8 +85,7 @@
   padding: 30px;
   position: relative;
   display: flex;
-  text-align: center;
-  grid-area: cajaCuatro; }
+  text-align: center; }
 
 .imgCuadro {
   width: 350px;
@@ -158,7 +99,8 @@
   animation-duration: 3s;
   animation-name: slidein;
   display: inline;
-  margin-top: 20rem; }
+  margin-top: 12rem;
+  font-size: 1.5rem; }
 
 @keyframes slidein {
   from {
@@ -169,102 +111,52 @@
     width: 100%; } }
 
 /*contenedor Tres*/
-.contenedorTres {
-  display: grid;
-  grid-area: contenedorTres;
-  display: flex; }
-
-.div-img-grises {
-  background-position: center;
-  height: 100%;
-  padding: 20px;
-  width: 250px;
-  height: 250px; }
-
-.imgGrises {
-  width: 100%;
-  height: 100%; }
-
-.img-telas-6 {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  float: left;
-  position: relative;
-  display: flex;
-  text-align: center; }
-
-.img-telas-7 {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  float: left;
-  position: relative;
-  display: flex;
-  text-align: center; }
-
-.img-telas-8 {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  float: left;
-  position: relative;
-  display: flex;
-  text-align: center; }
-
 /*contenedor cuatro*/
 .contenedorCuatro {
-  display: flex;
-  grid-area: contenedorCuatro; }
+  display: flex; }
 
 .cajaCinco {
   background-color: whitesmoke;
   overflow: hidden;
   width: 50%;
   height: 44.813rem;
-  float: left;
-  padding: 1.875rem;
-  position: relative;
   display: flex;
-  text-align: center;
-  grid-area: cajaCuatro; }
-
-.img-bathroom-1 {
-  margin-left: 10rem;
+  justify-content: center;
   align-items: center; }
 
 .textoCajaCinco {
-  width: 50%;
-  align-content: center;
-  margin-top: 10rem;
-  font-size: 1rem;
-  text-align: center; }
-
-.cajaSeis {
-  background-color: #c7c2c2;
-  overflow: hidden;
-  width: 50%;
-  height: 44.813rem;
-  display: flex;
-  justify-content: center;
-  align-items: right;
-  grid-area: cajaSeis; }
-
-.textoCajaSeis {
   width: 25rem;
   height: 25rem;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 2.188rem;
   margin: 10rem 0 0 0; }
 
-/* Media querys index*/
-@media only screen and (max-width: 880px) {
-  .textoCajaCuatro {
-    display: none !important; } }
+.cajaSeis {
+  background-color: whitesmoke;
+  overflow: hidden;
+  width: 400px;
+  height: 44.813rem; }
 
-@media only screen and (min-width: 880px) {
-  .textoCajaCuatro {
-    display: block !important; } }
+/* Contacto */
+#contacto {
+  overflow: hidden;
+  padding: 60px 0; }
+  #contacto h2,
+  #contacto p.large {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto; }
+  #contacto form {
+    padding-top: 60px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center; }
+    #contacto form button {
+      width: 50%; }
+
+/*telas*/
+#main-telas {
+  background: url(../img/IAN_4.jpg) center center/cover no-repeat; }
 
 /*Pagina de muebles*/
 .header-completo {
