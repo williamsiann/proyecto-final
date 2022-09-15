@@ -26,8 +26,7 @@ body{
 #footer-general{
     // background-color: #313131;
     background-color: map-get($colors, "footer");
-    position: fixed;
-    grid-area: footer-general;
+    position:relative;
     a {
         text-decoration: none; 
         color:#cfd1d3;

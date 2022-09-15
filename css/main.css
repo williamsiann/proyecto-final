@@ -11,8 +11,7 @@ body {
 
 #footer-general {
   background-color: #313131;
-  position: fixed;
-  grid-area: footer-general; }
+  position: relative; }
   #footer-general a {
     text-decoration: none;
     color: #cfd1d3; }
