@@ -1,3 +1,14 @@
+@mixin display-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+$colors: ("footer": #313131, "boxContainer": whitesmoke);
+
+@debug map-get($colors, "footer");
+
+
 *{
     margin: 0;
     padding: 0;
@@ -13,7 +24,14 @@ body{
 }
 
 #footer-general{
-    background-color: #313131;
+    // background-color: #313131;
+    background-color: map-get($colors, "footer");
+    position: fixed;
+    grid-area: footer-general;
+    a {
+        text-decoration: none; 
+        color:#cfd1d3;
+    }
 }
 
 p {
@@ -31,80 +49,93 @@ p {
 	height: 100vh;
 	padding: 150px 0;
 
+    .contenedor-index {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    .div-flotante-index{
+        background-color: #E5E5E5;
+        padding: 30px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 470px;
+        left: 50%;
+
+        .texto-2-index{
+            font-size: 2rem;
+        }
+        
+        .texto-3-index{
+            font-size: 1rem;
+        }
+    }
+
+    .texto-1-index{
+        font-size: 3rem;
+        writing-mode: vertical-lr;
+    }
+
 }
 
-.contenedor-index {
-	max-width: 1400px;
-	margin: 0 auto;
-	padding: 0 30px;
-}
 
-.div-flotante-index{
-    background-color: #E5E5E5;
-    padding: 30px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    width: 470px;
-    left: 50%;
-}
 
-.texto-1-index{
-    font-size: 3rem;
-    writing-mode: vertical-lr;
-}
 
-.texto-2-index{
-    font-size: 2rem;
-}
 
-.texto-3-index{
-    font-size: 1rem;
-}
+
+
+
 
 
 /*contenedor Dos*/
 .contenedorDos{
     display: flex;
+
+    .cajaTres{
+        background-color: map-get($colors, "boxContainer");
+        overflow:hidden;
+        width: 50% ;
+        height: 44.813rem;
+        @include display-center;  
+
+        .catalogoCajaTres{
+            width: 25rem; 
+            height: 25rem;
+            text-align: center;
+            font-size: 2.188rem;
+            margin: 10rem 0 0 0;
+        }
+    }
+
+    .cajaCuatro{
+        background-color: map-get($colors, "boxContainer");
+        overflow:hidden;
+        width: 50%;
+        height: 717px;
+        float: left;
+        padding: 30px ;
+        position: relative;
+        display: flex;
+        text-align: center;
+        .imgCuadro{
+            width: 350px; 
+            height: 450px;
+            padding-left:  50px;
+            margin: 6rem 4rem 3rem 2rem;
+            text-align: center;
+        }
+    }
 }
 
-.cajaTres{
-    background-color: whitesmoke;
-    overflow:hidden;
-    width: 50% ;
-    height: 44.813rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.catalogoCajaTres{
-    width: 25rem; 
-    height: 25rem;
-    text-align: center;
-    font-size: 2.188rem;
-    margin: 10rem 0 0 0;
-}
 
-.cajaCuatro{
-    background-color:whitesmoke;
-    overflow:hidden;
-    width: 50%;
-    height: 717px;
-    float: left;
-    padding: 30px ;
-    position: relative;
-    display: flex;
-    text-align: center;
-}
-.imgCuadro{
-    width: 350px; 
-    height: 450px;
-    padding-left:  50px;
-    margin: 6rem 4rem 3rem 2rem;
-    text-align: center;
-}
+
+
+
+
 
 .textoCajaCuatro{
     font-family: 'Inknut Antiqua', serif;
@@ -133,33 +164,38 @@ p {
 /*contenedor cuatro*/
 .contenedorCuatro{
     display: flex;
+
+    .cajaCinco{
+        background-color: map-get($colors, "boxContainer");
+        overflow:hidden;
+        width: 50% ;
+        height: 44.813rem;
+        @include display-center;  
+
+    }
+
+    .textoCajaCinco{
+        width: 25rem; 
+        height: 25rem;
+        text-align: center;
+        font-size: 2.188rem;
+        margin: 10rem 0 0 0;
+    }
+
+    .cajaSeis{
+        background-color: map-get($colors, "boxContainer");
+        overflow: hidden;
+        width: 400px;
+        height: 44.813rem;
+    }
 }
 
-.cajaCinco{
-    background-color: whitesmoke;
-    overflow:hidden;
-    width: 50% ;
-    height: 44.813rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 
-.textoCajaCinco{
-    width: 25rem; 
-    height: 25rem;
-    text-align: center;
-    font-size: 2.188rem;
-    margin: 10rem 0 0 0;
-}
 
-.cajaSeis{
-    background-color: whitesmoke;
-    overflow: hidden;
-    width: 400px;
-    height: 44.813rem;
-}
+
+
+
 
 /* Contacto */
 #contacto {
@@ -193,179 +229,178 @@ p {
 /*contenedor uno*/
 .contenedor-muebles{
     display: flex;
+
+    .cajaUno{
+        background-color: white;
+        overflow:hidden;
+        width: 50% ;
+        height: 44.813rem;
+        float: left;
+        position: relative;
+        display: block;
+        background-repeat: no-repeat;
+
+        .imgSillon{
+            object-fit:cover;
+            width: 100%; 
+            height: 44.813rem;
+            display: block;
+        }
+    }
+
+    .cajaDos{
+        background-color: #E5E5E5;
+        overflow:hidden;
+        width: 50%;
+        height: 44.813rem;
+        float: left;
+        padding: 1.875rem ;
+        position: relative;
+        display: block;
+        font-size: 16px;
+        text-align: center;
+
+        .imgRedonda{
+            width: 18.75rem; 
+            height: 18.75rem;
+            border-radius: 9.37rem;
+            border: 0.8rem solid #DFDEDE;
+            margin: 3rem;
+            align-items: center;
+        }
+    }
 }
 
-.cajaUno{
-    background-color: white;
-    overflow:hidden;
-    width: 50% ;
-    height: 44.813rem;
-    float: left;
-    position: relative;
-    display: block;
-}
-
-.imgSillon{
-    object-fit:cover;
-    width: 100%; 
-    height: 44.813rem;
-    display: block;
-}
-
-.cajaDos{
-    background-color: #E5E5E5;
-    overflow:hidden;
-    width: 50%;
-    height: 44.813rem;
-    float: left;
-    padding: 1.875rem ;
-    position: relative;
-    display: block;
-    font-size: 16px;
-    text-align: center;
-}
-
-.imgRedonda{
-    width: 18.75rem; 
-    height: 18.75rem;
-    border-radius: 9.37rem;
-    border: 0.8rem solid #DFDEDE;
-    margin: 3rem;
-    align-items: center;
-}
 
 
 
-/*pagina de cortinas*/
 
-.heder-cortinas{
-    grid-area: header-cortinas;
-}
 
-.main-cortinas{
-    grid-area: main-cortinas;
-}
 
-.footer-cortinas{
-    grid-area: footer-cortinas;
-}
 
-.contenedor-cortinas{
-    display: grid;
-    justify-content: center;
-    padding: 80px;   
-}
 
-.hijos{
-    padding: auto;
-    margin: 2rem;
-    width: 325px;
-    height: 325px;
-} 
 
-.img-cortinas-1{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    grid-area: img-cortinas-1;
-    border: 2px solid #5e5d5d; 
-    border-radius: 10px;
-}
 
-.img-cortinas-2{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    grid-area: img-cortinas-2;
-    border: 2px solid #5e5d5d; 
-    border-radius: 10px;
-}
+/*pagina de Proyectos*/
 
-.img-cortinas-3{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    grid-area: img-cortinas-3;
-    border: 2px solid #5e5d5d; 
-    border-radius: 10px;
-}
+.contenedor-proyectos{
 
-.img-cortinas-4{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    grid-area: img-cortinas-4;
-    border: 2px solid #5e5d5d; 
-    border-radius: 10px;
-}
+    .section-proyectos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+        background-size: cover;
+        grid-area: section-proyectos;
 
-.img-cortinas-5{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    grid-area: img-cortinas-5;
-    border: 2px solid #5e5d5d; 
-    border-radius: 10px;
-}
+        #proyectos-contenedor-1-right{
+            background-size: cover;
+            background: url('../img/proyecto-10.jpg') center;
+            background-repeat: no-repeat;
+            margin: 5px;
+        }
+        #proyectos-contenedor-1-left{
+            background-size: cover;
+            background: url('../img/proyecto-11.jpg') center;
+            background-repeat: no-repeat;
+            background-position: left; 
+            margin: 5px;
+        }
+    }
 
-.img-cortinas-6{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    grid-area: img-cortinas-6;
-    border: 2px solid #5e5d5d; 
-    border-radius: 10px;
-}
+    .main-proyectos{
+        grid-area: main-proyectos;
 
-.img-cortinas-7{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    grid-area: img-cortinas-7;
-    border: 2px solid #5e5d5d; 
-    border-radius: 10px;
-}
+    .div-proyectos-2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+        background-size: cover;
 
-.img-cortinas-8{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    grid-area: img-cortinas-8;
-    border: 2px solid #5e5d5d; 
-    border-radius: 10px;
-}
+        #proyectos-contenedor-2-right{
+            background-size: cover;
+            background: url('../img/proyecto-4.jpg') center;
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            margin: 5px;
+        }
+        #proyectos-contenedor-2-left{
+            background-size: cover;
+            background: url('../img/proyecto-5.jpg') center;
+            background-repeat: no-repeat;
+            margin: 5px;
+        }
+    }
+
+    .div-proyectos-3{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+        background-size: cover;
+
+        #proyectos-contenedor-3-right{
+            background-size: cover;
+            background: url('../img/proyecto-6.jpg') center;
+            background-repeat: no-repeat;
+            margin: 5px;
+        }
+        #proyectos-contenedor-3-left{
+            background-size: cover;
+            background: url('../img/proyecto-7.jpg') center;
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            margin: 5px;
+        }
+    }
+
+        .div-proyectos-4{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100vh;
+            background-size: cover;
+
+            #proyectos-contenedor-4-right{
+                background-size: cover;
+                background: url('../img/proyecto-8.jpg') center;
+                background-repeat: no-repeat;
+                margin: 5px;
+            }
+            #proyectos-contenedor-4-left{
+                background-size: cover;
+                background: url('../img/proyecto-9.jpg') center;
+                background-repeat: no-repeat;
+                margin: 5px;
+            }
+        }
+    }
+}   
+
+
 
 /*media querys*/
 
-@media (max-width: 768px) {
-    
-    .contenedor-cortinas{
-        height: 100vh;
-        display: grid;
-        grid-template-columns: 1fr ;
-     
-        grid-template-areas:
-                            "img-cortinas-1"
-                            "img-cortinas-2"
-                            "img-cortinas-3"
-                            "img-cortinas-4"
-                            "img-cortinas-5"
-                            "img-cortinas-6"
-                            "img-cortinas-7"
-                            "img-cortinas-8"
-                            ;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;   
+@media (max-width: 1000px) {
+
+    .div-flotante-index{
+        left: 25% !important;
     }
+}
+
+@media (max-width: 800px) {
+
+    .div-flotante-index{
+        left: 10% !important;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .div-flotante-index{
+        left: 2% !important;
+    }
+}
+
+@media (max-width: 768px) {
+
     
         #galeria .galeria-grid {
             display: grid;
@@ -385,19 +420,6 @@ p {
 
 @media (min-width: 768px) {
 
-        .contenedor-cortinas{
-            height: 80vh;
-            display: grid;
-            grid-template-columns: auto ;
-
-            grid-template-areas:
-                                "img-cortinas-1 img-cortinas-2 img-cortinas-3 img-cortinas-4"
-                                "img-cortinas-5 img-cortinas-6 img-cortinas-7 img-cortinas-8"
-                                ;
-            justify-content: center;
-            justify-items: center;
-            align-items: center;   
-        }
     
         #galeria .galeria-grid {
             display: grid;
@@ -407,8 +429,9 @@ p {
                             "caja-1 caja-2 caja-3 caja-4"
                             "caja-1 caja-5 caja-6 caja-7"
             ;
-             }
+             }      
         }
+
     
 
 
@@ -466,3 +489,5 @@ p {
         justify-content: left;
     }
 }
+
+   
